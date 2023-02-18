@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/styles/menu-update.css" />
+        <script src="./dist/menu-update.js" defer></script>
+        <title>Menu Update Page</title>
+    </head>
+    <body>
+        <header>
+            <h1>Menu Update Page</h1>
+        </header>
+        <main>
+            <form
+                id="add-menu-item-form"
+                method="POST"
+                enctype="multipart/form-data"
+                autocomplete="off"
+            >
+                <h2 id="add-menu-item-heading">Add Menu Item</h2>
+                <label for="name-input">Item Name:</label>
+                <input id="name-input" type="text" maxlength="30" name="name" />
+                <label for="price-input">Item Price:</label>
+                <input
+                    id="price-input"
+                    type="text"
+                    pattern="[0-9.]+"
+                    name="price"
+                />
+                <label for="description-input">Item Description</label>
+                <textarea id="description-input" name="description"></textarea>
+                <label for="image-input">Upload Item Image</label>
+                <input
+                    id="image-input"
+                    type="file"
+                    accept=".jpg, .png"
+                    name="image"
+                />
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+    </body>
+</html>
