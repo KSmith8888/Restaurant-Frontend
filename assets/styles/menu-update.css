@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#add-menu-item-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,90 @@
+[
+    {
+        "Id": 1,
+        "Name": "Sunrise Sanctuary",
+        "Description": "A fried egg, three strips of bacon, toast, salad and our soup of the day. Everything you need to get your day cooking.",
+        "Price": 15.75,
+        "Alt": "A large plate with a fried egg, bacon, toast, salad and soup on it.",
+        "Highlight": false
+    },
+    {
+        "Id": 2,
+        "Name": "Eggs-a-Plenty",
+        "Description": "Three fried eggs and three strips of bacon. Served with our signature bread, baked in house daily and avacado.",
+        "Price": 11.75,
+        "Alt": "A plate with three fried eggs, three strips of bacon and a slice of bread on it.",
+        "Highlight": false
+    },
+    {
+        "Id": 3,
+        "Name": "Stuffed Cereal",
+        "Description": "Cornflakes topped with banana slices, blueberries and walnuts.",
+        "Price": 7.5,
+        "Alt": "A bowl of cereal on a table with banana slices, blueberries, walnuts and a spoon next to it.",
+        "Highlight": false
+    },
+    {
+        "Id": 4,
+        "Name": "Perfect Parfait",
+        "Description": "Our signature fruit yogurt and granola parfaits. Filled with strawberries, raspberries, granola clusters and yogurt. ",
+        "Price": 10.25,
+        "Alt": "Three tall glasses filled with fruit and yogurt parfaits.",
+        "Highlight": true
+    },
+    {
+        "Id": 5,
+        "Name": "Scrumptious Breakfast Sandwich",
+        "Description": "Some really good description",
+        "Price": 12.25,
+        "Alt": "A useful alt description",
+        "Highlight": false
+    },
+    {
+        "Id": 6,
+        "Name": "The Full Stack Loaded Pancakes",
+        "Description": "Some really good description",
+        "Price": 14.25,
+        "Alt": "A useful alt description",
+        "Highlight": false
+    },
+    {
+        "Id": 7,
+        "Name": "The Whole Farm Breakfast Burger",
+        "Description": "Some really good description",
+        "Price": 16.5,
+        "Alt": "A useful alt description",
+        "Highlight": false
+    },
+    {
+        "Id": 8,
+        "Name": "Wicked Waffles",
+        "Description": "Some really good description",
+        "Price": 13.25,
+        "Alt": "A useful alt description",
+        "Highlight": false
+    },
+    {
+        "Id": 9,
+        "Name": "The Peach Treat",
+        "Description": "Some really good description",
+        "Price": 11.25,
+        "Alt": "A useful alt description",
+        "Highlight": false
+    },
+    {
+        "Id": 10,
+        "Name": "The Classic",
+        "Description": "Some really good description",
+        "Price": 12.75,
+        "Alt": "A useful alt description",
+        "Highlight": true
+    },
+    {
+        "Id": 11,
+        "Name": "Outlandish Oatmeal",
+        "Description": "Some really good description",
+        "Price": 8.25,
+        "Alt": "A useful alt description",
+        "Highlight": false
+    }
+]
