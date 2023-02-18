@@ -1,0 +1,14 @@
+{
+    "name": "restaurant-frontend",
+    "version": "1.0.0",
+    "description": "The frontend of a restaurant website and management app to handle content updates",
+    "private": "true",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "npx tsc"
+    },
+    "author": "",
+    "devDependencies": {
+        "typescript": "^4.9.5"
+    }
+}
