@@ -12,12 +12,7 @@
             <h1>Menu Update Page</h1>
         </header>
         <main>
-            <form
-                id="add-menu-item-form"
-                method="POST"
-                enctype="multipart/form-data"
-                autocomplete="off"
-            >
+            <form id="add-menu-item-form" autocomplete="off">
                 <h2 id="add-menu-item-heading">Add Menu Item</h2>
                 <label for="name-input">Item Name:</label>
                 <input id="name-input" type="text" maxlength="30" name="name" />
@@ -37,6 +32,12 @@
                     accept=".jpg, .png"
                     name="image"
                 />
+                <label for="alt-input"
+                    >Provide a description of the image:</label
+                >
+                <input id="alt-input" type="text" maxlength="30" name="alt" />
+                <label for="highlight-input">Highlight Item:</label>
+                <input id="highlight-input" type="checkbox" name="highlight" />
                 <button type="submit">Submit</button>
             </form>
         </main>
