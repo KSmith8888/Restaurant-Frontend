@@ -8,10 +8,15 @@ const descriptionInput = <HTMLInputElement>(
 );
 const imageInput = <HTMLInputElement>document.getElementById("image-input");
 
-addMenuItemForm.addEventListener("submit", (e) => {
+addMenuItemForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     const form = <HTMLFormElement>e.target;
-    const data = new FormData(form);
-    console.log(data);
+    const newItemData = new FormData(form);
+    const response = await fetch(`http://127.0.0.1:3000/add`, {
+        method: "POST",
+        body: newItemData,
+    });
+    const data = await response.json();
     addMenuItemForm.reset();
+    console.log(data);
 });
