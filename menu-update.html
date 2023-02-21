@@ -4,42 +4,66 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./assets/styles/menu-update.css" />
-        <script src="./dist/menu-update.js" defer></script>
+        <script src="./dist/menu-update.js" type="module"></script>
         <title>Menu Update Page</title>
     </head>
     <body>
-        <header>
+        <header class="header">
             <h1>Menu Update Page</h1>
         </header>
-        <main>
+        <main class="main">
             <form id="add-menu-item-form" autocomplete="off">
                 <h2 id="add-menu-item-heading">Add Menu Item</h2>
-                <label for="name-input">Item Name:</label>
-                <input id="name-input" type="text" maxlength="30" name="name" />
-                <label for="price-input">Item Price:</label>
+                <label for="name-input"> Item Name: </label>
+                <input
+                    id="name-input"
+                    type="text"
+                    maxlength="30"
+                    name="name"
+                    required
+                />
+                <label for="price-input"> Item Price: </label>
                 <input
                     id="price-input"
                     type="text"
                     pattern="[0-9.]+"
                     name="price"
+                    required
                 />
-                <label for="description-input">Item Description</label>
-                <textarea id="description-input" name="description"></textarea>
-                <label for="image-input">Upload Item Image</label>
+                <label for="description-input"> Item Description </label>
+                <textarea id="description-input" name="description" required>
+                </textarea>
+                <label for="image-input"> Upload Item Image </label>
                 <input
                     id="image-input"
                     type="file"
                     accept=".jpg, .png"
                     name="image"
+                    required
                 />
-                <label for="alt-input"
-                    >Provide a description of the image:</label
-                >
-                <input id="alt-input" type="text" maxlength="30" name="alt" />
-                <label for="highlight-input">Highlight Item:</label>
+                <label for="alt-input">
+                    Provide a description of the image:
+                </label>
+                <input
+                    id="alt-input"
+                    type="text"
+                    maxlength="30"
+                    name="alt"
+                    required
+                />
+                <label for="highlight-input"> Highlight Item: </label>
                 <input id="highlight-input" type="checkbox" name="highlight" />
                 <button type="submit">Submit</button>
             </form>
+            <section id="current-menu-section">
+                <h2 class="current-menu-heading">Current Menu Items:</h2>
+            </section>
         </main>
+        <footer class="footer">
+            <small class="footer-text"
+                >Legal information and disclosures can be found in our
+                <a href="#" class="footer-link">Terms of Service</a></small
+            >
+        </footer>
     </body>
 </html>
