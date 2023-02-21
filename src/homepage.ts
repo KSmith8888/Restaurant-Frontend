@@ -1,4 +1,3 @@
-const menuSection = <HTMLElement>document.getElementById("menu-section");
 const mainMenuItems = <HTMLDivElement>(
     document.getElementById("main-menu-items")
 );
@@ -17,7 +16,7 @@ interface MenuItem {
 }
 
 function createMenuElements(data: MenuItem[]) {
-    data.map((item: MenuItem) => {
+    data.forEach((item: MenuItem) => {
         const menuItemContainer = document.createElement("div");
         const menuItemImage = document.createElement("img");
         menuItemImage.src = item.path;
@@ -27,6 +26,7 @@ function createMenuElements(data: MenuItem[]) {
         menuItemContainer.append(menuItemInfo);
         const menuItemName = document.createElement("h3");
         menuItemName.classList.add("menu-item-name");
+        item.price = Number(item.price);
         menuItemName.textContent = `${item.name} - $${item.price.toFixed(2)}`;
         menuItemInfo.append(menuItemName);
         const menuItemDescription = document.createElement("p");
@@ -75,3 +75,5 @@ async function getDynamicMenuData() {
 }
 
 getDynamicMenuData();
+
+export { MenuItem };
