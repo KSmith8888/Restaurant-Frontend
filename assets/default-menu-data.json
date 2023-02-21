@@ -2,99 +2,99 @@
     {
         "id": 1,
         "name": "Sunrise Sanctuary",
-        "description": "A fried egg, three strips of bacon, toast, salad and our soup of the day. Everything you need to get your day cooking.",
+        "description": "A fried egg, three strips of bacon, toast, salad and our soup of the day. Everything you need to get your day cooking",
         "price": 15.75,
-        "alt": "A large plate with a fried egg, bacon, toast, salad and soup on it.",
+        "alt": "A large plate with a fried egg, bacon, toast, salad and soup on it",
         "highlight": false,
         "path": "./assets/images/menu-image-1.jpg"
     },
     {
         "id": 2,
         "name": "Eggs-a-Plenty",
-        "description": "Three fried eggs and three strips of bacon. Served with our signature bread, baked in house daily and avacado.",
+        "description": "Three fried eggs and three strips of bacon. Served with avacado and our signature bread, baked in house daily",
         "price": 11.75,
-        "alt": "A plate with three fried eggs, three strips of bacon and a slice of bread on it.",
+        "alt": "A plate with three fried eggs, three strips of bacon and a slice of bread on it",
         "highlight": false,
         "path": "./assets/images/menu-image-2.jpg"
     },
     {
         "id": 3,
         "name": "Stuffed Cereal",
-        "description": "Cornflakes topped with banana slices, blueberries and walnuts.",
+        "description": "Cornflakes topped with banana slices, blueberries and walnuts",
         "price": 7.5,
-        "alt": "A bowl of cereal on a table with banana slices, blueberries, walnuts and a spoon next to it.",
+        "alt": "A bowl of cereal on a table with banana slices, blueberries, walnuts and a spoon next to it",
         "highlight": false,
         "path": "./assets/images/menu-image-3.jpg"
     },
     {
         "id": 4,
         "name": "Perfect Parfait",
-        "description": "Our signature fruit yogurt and granola parfaits. Filled with strawberries, raspberries, granola clusters and yogurt. ",
+        "description": "Our signature fruit yogurt and granola parfaits. Filled with strawberries, raspberries, granola clusters and yogurt",
         "price": 10.25,
-        "alt": "Three tall glasses filled with fruit and yogurt parfaits.",
+        "alt": "Three tall glasses filled with fruit and yogurt parfaits",
         "highlight": true,
         "path": "./assets/images/menu-image-4.jpg"
     },
     {
         "id": 5,
         "name": "Scrumptious Breakfast Sandwich",
-        "description": "Some really good description",
+        "description": "A fried egg, bacon, cheese, lettuce and tomato on a english muffin. Yum!",
         "price": 12.25,
-        "alt": "A useful alt description",
+        "alt": "An english muffin sandwich on a plate",
         "highlight": false,
         "path": "./assets/images/menu-image-5.jpg"
     },
     {
         "id": 6,
         "name": "The Full Stack Loaded Pancakes",
-        "description": "Some really good description",
+        "description": "Seven fluffy pancakes topped with mixed fruit and our special carmel syrup. Served with whipped cream",
         "price": 14.25,
-        "alt": "A useful alt description",
+        "alt": "A stack of pancakes on a plate, covered in syrup with a small cup of whipped cream next to it",
         "highlight": false,
         "path": "./assets/images/menu-image-6.jpg"
     },
     {
         "id": 7,
         "name": "The Whole Farm Breakfast Burger",
-        "description": "Some really good description",
+        "description": "An all-american burger topped a fried egg, bacon, canadian bacon and veggies. Cow goes moo, pig goes oink, chicken goes cluck",
         "price": 16.5,
-        "alt": "A useful alt description",
+        "alt": "A burger with a large pile of toppings leaning over on a plate",
         "highlight": false,
         "path": "./assets/images/menu-image-7.jpg"
     },
     {
         "id": 8,
         "name": "Wicked Waffles",
-        "description": "Some really good description",
+        "description": "Four fresh waffles covered in chopped strawberries and served with delicious syrup",
         "price": 13.25,
-        "alt": "A useful alt description",
+        "alt": "A stack of waffles on a plate, topped with strawberries with a small cup of syrup next to it",
         "highlight": false,
         "path": "./assets/images/menu-image-8.jpg"
     },
     {
         "id": 9,
         "name": "The Peach Treat",
-        "description": "Some really good description",
+        "description": "Peaches, blueberries, pistachios and cream cheese served on our fresh baked bread",
         "price": 11.25,
-        "alt": "A useful alt description",
+        "alt": "Two slices of bread covered in cream cheese, topped with large sections of peach on a plate",
         "highlight": false,
         "path": "./assets/images/menu-image-9.jpg"
     },
     {
         "id": 10,
         "name": "The Classic",
-        "description": "Some really good description",
+        "description": "Two fried eggs cooked to preference, with three slices of crispy bacon, rustic hashbrowns, a sausage link and toast. Served with ketchup",
         "price": 12.75,
-        "alt": "A useful alt description",
+        "alt": "Fried eggs, bacon, sausage, hashbrowns and toast on a plate",
         "highlight": true,
         "path": "./assets/images/menu-image-10.jpg"
     },
     {
         "id": 11,
         "name": "Outlandish Oatmeal",
-        "description": "Some really good description",
+        "description": "Hearty oatmeal topped with fresh blueberries",
         "price": 8.25,
-        "alt": "A useful alt description",
+        "alt": "An outstretched hand holding a bowl filled with oatmeal",
         "highlight": false,
         "path": "./assets/images/menu-image-11.jpg"
     }
