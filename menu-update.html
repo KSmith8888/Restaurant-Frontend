@@ -58,6 +58,61 @@
             <section id="current-menu-section">
                 <h2 class="current-menu-heading">Current Menu Items:</h2>
             </section>
+            <dialog id="update-menu-item-modal">
+                <form id="update-menu-item-form" autocomplete="off">
+                    <button type="button" id="close-menu-modal-button">
+                        Close
+                    </button>
+                    <h2 id="update-menu-item-heading">Update Menu Item:</h2>
+                    <p>Item Id: <span id="update-item-id"></span></p>
+                    <label for="update-name-input">Update Item Name: </label>
+                    <input
+                        id="update-name-input"
+                        type="text"
+                        maxlength="30"
+                        name="name"
+                    />
+                    <label for="update-price-input">Update Item Price: </label>
+                    <input
+                        id="update-price-input"
+                        type="text"
+                        pattern="[0-9.]+"
+                        name="price"
+                    />
+                    <label for="update-description-input">
+                        Item Description
+                    </label>
+                    <textarea id="update-description-input" name="description">
+                    </textarea>
+                    <label for="update-image-input">Update Item Image </label>
+                    <input
+                        id="update-image-input"
+                        type="file"
+                        accept=".jpg, .png"
+                        name="image"
+                    />
+                    <label for="update-alt-input">
+                        Provide a description of the new image:
+                    </label>
+                    <input
+                        id="update-alt-input"
+                        type="text"
+                        maxlength="30"
+                        name="alt"
+                    />
+                    <label for="update-highlight-input">
+                        Highlight Item:
+                    </label>
+                    <input
+                        id="update-highlight-input"
+                        type="checkbox"
+                        name="highlight"
+                    />
+                    <button type="submit" id="submit-menu-modal-button">
+                        Update
+                    </button>
+                </form>
+            </dialog>
         </main>
         <footer class="footer">
             <small class="footer-text"
