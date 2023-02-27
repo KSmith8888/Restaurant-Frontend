@@ -6,13 +6,14 @@ const highlightMenuItem = <HTMLDivElement>(
 );
 
 interface MenuItem {
-    id: number;
+    _id: string;
     name: string;
     description: string;
     price: number;
     alt: string;
     highlight: boolean;
     path: string;
+    __v: number;
 }
 
 function createMenuElements(data: MenuItem[]) {
@@ -62,7 +63,7 @@ async function getDefaultMenuData() {
 
 async function getDynamicMenuData() {
     try {
-        const response = await fetch("http://127.0.0.1:3000/menu");
+        const response = await fetch("http://127.0.0.1:3000/api/v1/menu");
         if (!response.ok) {
             throw new Error(`Status error getting data ${response.status}`);
         }
