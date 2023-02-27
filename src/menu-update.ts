@@ -65,6 +65,8 @@ async function getMenuItem(id: string) {
 }
 
 async function getAllMenuItems() {
+    currentMenuSection.innerHTML =
+        '<h2 class="current-menu-heading">Current Menu Items:</h2>';
     try {
         const response = await fetch("http://127.0.0.1:3000/api/v1/menu");
         if (!response.ok) {
@@ -73,7 +75,7 @@ async function getAllMenuItems() {
         const data = await response.json();
         data.forEach((item: MenuItem) => {
             const itemContainer = document.createElement("div");
-            itemContainer.classList.add("menu-item.container");
+            itemContainer.classList.add("menu-item-container");
             currentMenuSection.append(itemContainer);
             const itemDetails = document.createElement("p");
             itemDetails.classList.add("item-details");
@@ -85,18 +87,22 @@ async function getAllMenuItems() {
             itemContainer.append(updateItemBtn);
             updateItemBtn.addEventListener("click", () => {
                 updateMenuItemModal.showModal();
-                getMenuItem(item.id.toString());
+                getMenuItem(item._id);
             });
             const deleteItemBtn = document.createElement("button");
             deleteItemBtn.classList.add("delete-item-button");
             deleteItemBtn.textContent = "Delete Item";
             itemContainer.append(deleteItemBtn);
             deleteItemBtn.addEventListener("click", () => {
-                deleteMenuItem(item.id.toString());
+                deleteMenuItem(item._id);
             });
         });
     } catch (err) {
         console.error(err);
+        const errorMessage = document.createElement("p");
+        errorMessage.classList.add("error-message");
+        errorMessage.textContent = "Error getting menu data";
+        currentMenuSection.append(errorMessage);
     }
 }
 
@@ -118,6 +124,8 @@ async function updateMenuItem(e: SubmitEvent) {
         }
         const data = await response.json();
         updateMenuItemForm.reset();
+        updateMenuItemModal.close();
+        getAllMenuItems();
         console.log(data);
     } catch (err) {
         console.error(err);
@@ -136,6 +144,7 @@ async function deleteMenuItem(id: string) {
             throw new Error(`Status error getting data ${response.status}`);
         }
         const data = await response.json();
+        getAllMenuItems();
         console.log(data);
     } catch (err) {
         console.error(err);
