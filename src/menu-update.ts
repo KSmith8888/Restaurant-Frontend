@@ -24,9 +24,6 @@ const updatePriceInput = <HTMLInputElement>(
 const updateDescriptionInput = <HTMLTextAreaElement>(
     document.getElementById("update-description-input")
 );
-const updateItemId = <HTMLParagraphElement>(
-    document.getElementById("update-item-id")
-);
 
 async function createMenuItem(e: SubmitEvent) {
     e.preventDefault();
@@ -58,15 +55,18 @@ async function getMenuItem(id: string) {
         updateNameInput.value = data.name;
         updatePriceInput.value = data.price;
         updateDescriptionInput.textContent = data.description;
-        updateItemId.textContent = id;
+        updateMenuItemForm.dataset.id = id;
     } catch (err) {
         console.error(err);
     }
 }
 
 async function getAllMenuItems() {
-    currentMenuSection.innerHTML =
-        '<h2 class="current-menu-heading">Current Menu Items:</h2>';
+    currentMenuSection.replaceChildren();
+    const currentMenuHeading = document.createElement("h2");
+    currentMenuHeading.classList.add("current-menu-heading");
+    currentMenuHeading.textContent = "Current Menu Items:";
+    currentMenuSection.append(currentMenuHeading);
     try {
         const response = await fetch("http://127.0.0.1:3000/api/v1/menu");
         if (!response.ok) {
@@ -108,7 +108,7 @@ async function getAllMenuItems() {
 
 async function updateMenuItem(e: SubmitEvent) {
     e.preventDefault();
-    const id = updateItemId.textContent;
+    const id = updateMenuItemForm.dataset.id;
     const form = <HTMLFormElement>e.target;
     const newItemData = new FormData(form);
     try {
