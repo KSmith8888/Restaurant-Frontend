@@ -139,3 +139,14 @@ input::file-selector-button:focus,
     padding: 3em;
     text-align: center;
 }
+
+@media (max-width: 950px) {
+    .main {
+        flex-direction: column;
+        align-items: center;
+    }
+    #current-menu-section {
+        width: 90%;
+        margin: 1em 0 0 0;
+    }
+}
