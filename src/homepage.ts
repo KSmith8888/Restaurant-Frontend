@@ -58,6 +58,10 @@ async function getDefaultMenuData() {
         createMenuElements(data);
     } catch (err) {
         console.error(err);
+        const errorMessage = document.createElement("p");
+        errorMessage.classList.add("error-message");
+        errorMessage.textContent = "Error getting menu data";
+        mainMenuItems.append(errorMessage);
     }
 }
 
@@ -68,7 +72,11 @@ async function getDynamicMenuData() {
             throw new Error(`Status error getting data ${response.status}`);
         }
         const data = await response.json();
-        createMenuElements(data);
+        if (data.length > 0) {
+            createMenuElements(data);
+        } else {
+            getDefaultMenuData();
+        }
     } catch (err) {
         console.error(err);
         getDefaultMenuData();
