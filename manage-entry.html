@@ -2,6 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'none'; style-src 'self'; script-src 'self'; connect-src 'self' http://127.0.0.1:3000/api/v1/; base-uri 'self'; img-src 'self' http://127.0.0.1:3000/api/v1/"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="./assets/styles/manage-entry.css" rel="stylesheet" />
         <script src="./dist/manage-entry.js" type="module"></script>
@@ -13,6 +17,9 @@
         </header>
         <main class="main">
             <form id="login-form" autocomplete="off">
+                <button id="create-account-button" type="button">
+                    Create Account
+                </button>
                 <h2>Login Form</h2>
                 <label for="username-input">Username:</label>
                 <input
