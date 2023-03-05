@@ -2,9 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'none'; style-src 'self'; script-src 'self'; connect-src 'self' http://127.0.0.1:3000/api/v1/; base-uri 'self'; img-src 'self' http://127.0.0.1:3000/api/v1/"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./assets/styles/homepage.css" />
-        <script src="./dist/homepage.js" defer></script>
+        <script src="./dist/homepage.js" type="module"></script>
         <title>Breakfast for Dinner</title>
     </head>
     <body>
