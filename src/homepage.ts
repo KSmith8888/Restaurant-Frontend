@@ -17,7 +17,7 @@ interface MenuItem {
 }
 
 function createMenuElements(data: MenuItem[]) {
-    data.forEach((item: MenuItem) => {
+    data.forEach((item: MenuItem, index) => {
         const menuItemContainer = document.createElement("div");
         const menuItemImage = document.createElement("img");
         menuItemImage.src = item.path;
@@ -44,6 +44,9 @@ function createMenuElements(data: MenuItem[]) {
             menuItemContainer.classList.add("menu-item-container");
             menuItemImage.classList.add("menu-item-image");
             menuItemInfo.classList.add("menu-item-info");
+            if (index >= 3) {
+                menuItemImage.loading = "lazy";
+            }
         }
     });
 }
