@@ -1,0 +1,14 @@
+{
+    "name": "restaurant-frontend",
+    "version": "1.0.0",
+    "description": "The public portion of a restaurant website and management app",
+    "private": "true",
+    "scripts": {
+        "test": "node --test ./tests",
+        "build": "npx tsc"
+    },
+    "author": "Kevyn Smith",
+    "devDependencies": {
+        "typescript": "^5.0.3"
+    }
+}
