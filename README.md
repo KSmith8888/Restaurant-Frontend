@@ -1,6 +1,8 @@
-#The public portion of a restaurant website and management app
+# Restaurant-Public
 
 https://ksmith8888.github.io/Restaurant-Public/
+
+The public portion of a restaurant website and management app
 
 Attribution:
 
