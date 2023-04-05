@@ -1,6 +1,6 @@
-https://restaurant-public.netlify.app/
+#The public portion of a restaurant website and management app
 
-The public portion of a restaurant website and management app.
+https://ksmith8888.github.io/Restaurant-Public/
 
 Attribution:
 
