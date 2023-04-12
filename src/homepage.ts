@@ -4,6 +4,9 @@ const mainMenuItems = <HTMLDivElement>(
 const highlightMenuItem = <HTMLDivElement>(
     document.getElementById("highlight-menu-item")
 );
+const eventsContainer = <HTMLDivElement>(
+    document.getElementById("events-container")
+);
 
 interface MenuItem {
     _id: string;
@@ -13,6 +16,14 @@ interface MenuItem {
     alt: string;
     highlight: boolean;
     path: string;
+    __v: number;
+}
+
+interface Event {
+    _id: string;
+    title: string;
+    date: string;
+    content: string;
     __v: number;
 }
 
@@ -51,6 +62,23 @@ function createMenuElements(data: MenuItem[]) {
     });
 }
 
+function createEventElements(data: Event[]) {
+    data.forEach((event) => {
+        const eventTitle = document.createElement("h3");
+        eventTitle.classList.add("event-title");
+        eventTitle.textContent = event.title;
+        eventsContainer.append(eventTitle);
+        const eventDate = document.createElement("p");
+        eventDate.classList.add("event-date");
+        eventDate.textContent = event.date;
+        eventsContainer.append(eventDate);
+        const eventContent = document.createElement("p");
+        eventContent.classList.add("event-content");
+        eventContent.textContent = event.content;
+        eventsContainer.append(eventContent);
+    });
+}
+
 async function getDefaultMenuData() {
     try {
         const response = await fetch("./assets/default-menu-data.json");
@@ -86,6 +114,38 @@ async function getDynamicMenuData() {
     }
 }
 
-getDynamicMenuData();
+async function getDynamicEventData() {
+    try {
+        const response = await fetch("http://127.0.0.1:3000/api/v1/events");
+        if (!response.ok) {
+            throw new Error(`Status error getting data ${response.status}`);
+        }
+        const data = await response.json();
+        if (data.length > 0) {
+            createEventElements(data);
+        } else {
+            getDefaultEventData();
+        }
+    } catch (err) {
+        console.error(err);
+        getDefaultEventData();
+    }
+}
 
-export { MenuItem };
+async function getDefaultEventData() {
+    try {
+        const response = await fetch("./assets/default-event-data.json");
+        if (!response.ok) {
+            throw new Error(`Status error getting data ${response.status}`);
+        }
+        const data = await response.json();
+        createEventElements(data);
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+getDynamicMenuData();
+getDynamicEventData();
+
+export { MenuItem, Event };

@@ -1,0 +1,16 @@
+[
+    {
+        "_id": "1",
+        "title": "New Location Grand Opening",
+        "date": "2023-08-15",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, non necessitatibus aperiam quasi excepturi iusto voluptate aliquid in sit quidem quae adipisci ratione vero explicabo magnam doloremque laudantium accusamus cumque amet, eos obcaecati quam eveniet deserunt.",
+        "__v": 1
+    },
+    {
+        "_id": "2",
+        "title": "Annual Waffle Eating Contest",
+        "date": "2023-07-9",
+        "content": "Consectetur adipisicing elit. Labore, non necessitatibus aperiam quasi excepturi iusto voluptate aliquid in sit quidem quae adipisci ratione vero explicabo magnam doloremque laudantium accusamus cumque amet.",
+        "__v": 1
+    }
+]
