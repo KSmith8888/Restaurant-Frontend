@@ -19,6 +19,7 @@ img {
     background-color: purple;
     color: yellow;
     padding: 1.5em 0;
+    text-align: center;
 }
 
 .main-heading {
@@ -144,5 +145,39 @@ img {
 .footer {
     display: flex;
     justify-content: center;
+    text-align: center;
     padding: 2em;
+}
+
+@media (max-width: 950px) {
+    #menu-section {
+        flex-direction: column;
+    }
+    #main-menu-items {
+        width: 100%;
+        padding: 0;
+        align-items: center;
+    }
+    #sidebar {
+        width: 100%;
+    }
+    .menu-item-container {
+        height: min-content;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-item-image {
+        width: 90%;
+        height: 15em;
+    }
+    .menu-item-info {
+        width: 90%;
+    }
+    .menu-heading {
+        text-align: center;
+        padding: 0;
+    }
+    #events-container {
+        padding: 0 2em;
+    }
 }
