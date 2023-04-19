@@ -1,40 +1,15 @@
-var __awaiter =
-    (this && this.__awaiter) ||
-    function (thisArg, _arguments, P, generator) {
-        function adopt(value) {
-            return value instanceof P
-                ? value
-                : new P(function (resolve) {
-                      resolve(value);
-                  });
-        }
-        return new (P || (P = Promise))(function (resolve, reject) {
-            function fulfilled(value) {
-                try {
-                    step(generator.next(value));
-                } catch (e) {
-                    reject(e);
-                }
-            }
-            function rejected(value) {
-                try {
-                    step(generator["throw"](value));
-                } catch (e) {
-                    reject(e);
-                }
-            }
-            function step(result) {
-                result.done
-                    ? resolve(result.value)
-                    : adopt(result.value).then(fulfilled, rejected);
-            }
-            step(
-                (generator = generator.apply(thisArg, _arguments || [])).next()
-            );
-        });
-    };
-const mainMenuItems = document.getElementById("main-menu-items");
-const highlightMenuItem = document.getElementById("highlight-menu-item");
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+const mainMenuItems = (document.getElementById("main-menu-items"));
+const highlightMenuItem = (document.getElementById("highlight-menu-item"));
+const eventsContainer = (document.getElementById("events-container"));
 function createMenuElements(data) {
     data.forEach((item, index) => {
         const menuItemContainer = document.createElement("div");
@@ -58,7 +33,8 @@ function createMenuElements(data) {
             menuItemContainer.classList.add("menu-highlight-container");
             menuItemImage.classList.add("menu-highlight-image");
             menuItemInfo.classList.add("menu-highlight-info");
-        } else {
+        }
+        else {
             mainMenuItems.append(menuItemContainer);
             menuItemContainer.classList.add("menu-item-container");
             menuItemImage.classList.add("menu-item-image");
@@ -67,6 +43,22 @@ function createMenuElements(data) {
                 menuItemImage.loading = "lazy";
             }
         }
+    });
+}
+function createEventElements(data) {
+    data.forEach((event) => {
+        const eventTitle = document.createElement("h3");
+        eventTitle.classList.add("event-title");
+        eventTitle.textContent = event.title;
+        eventsContainer.append(eventTitle);
+        const eventDate = document.createElement("p");
+        eventDate.classList.add("event-date");
+        eventDate.textContent = event.date;
+        eventsContainer.append(eventDate);
+        const eventContent = document.createElement("p");
+        eventContent.classList.add("event-content");
+        eventContent.textContent = event.content;
+        eventsContainer.append(eventContent);
     });
 }
 function getDefaultMenuData() {
@@ -78,7 +70,8 @@ function getDefaultMenuData() {
             }
             const data = yield response.json();
             createMenuElements(data);
-        } catch (err) {
+        }
+        catch (err) {
             console.error(err);
             const errorMessage = document.createElement("p");
             errorMessage.classList.add("error-message");
@@ -97,14 +90,53 @@ function getDynamicMenuData() {
             const data = yield response.json();
             if (data.length > 0) {
                 createMenuElements(data);
-            } else {
+            }
+            else {
                 getDefaultMenuData();
             }
-        } catch (err) {
+        }
+        catch (err) {
             console.error(err);
             getDefaultMenuData();
         }
     });
 }
+function getDynamicEventData() {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            const response = yield fetch("http://127.0.0.1:3000/api/v1/events");
+            if (!response.ok) {
+                throw new Error(`Status error getting data ${response.status}`);
+            }
+            const data = yield response.json();
+            if (data.length > 0) {
+                createEventElements(data);
+            }
+            else {
+                getDefaultEventData();
+            }
+        }
+        catch (err) {
+            console.error(err);
+            getDefaultEventData();
+        }
+    });
+}
+function getDefaultEventData() {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            const response = yield fetch("./assets/default-event-data.json");
+            if (!response.ok) {
+                throw new Error(`Status error getting data ${response.status}`);
+            }
+            const data = yield response.json();
+            createEventElements(data);
+        }
+        catch (err) {
+            console.error(err);
+        }
+    });
+}
 getDynamicMenuData();
+getDynamicEventData();
 export {};
