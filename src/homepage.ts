@@ -98,7 +98,9 @@ async function getDefaultMenuData() {
 
 async function getDynamicMenuData() {
     try {
-        const response = await fetch("http://127.0.0.1:3000/api/v1/menu");
+        const response = await fetch(
+            "https://restaurant-admin-production.up.railway.app/api/v1/menu"
+        );
         if (!response.ok) {
             throw new Error(`Status error getting data ${response.status}`);
         }
@@ -116,7 +118,9 @@ async function getDynamicMenuData() {
 
 async function getDynamicEventData() {
     try {
-        const response = await fetch("http://127.0.0.1:3000/api/v1/events");
+        const response = await fetch(
+            "https://restaurant-admin-production.up.railway.app/api/v1/events"
+        );
         if (!response.ok) {
             throw new Error(`Status error getting data ${response.status}`);
         }
