@@ -151,5 +151,3 @@ async function getDefaultEventData() {
 
 getDynamicMenuData();
 getDynamicEventData();
-
-export { MenuItem, Event };
