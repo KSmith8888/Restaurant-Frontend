@@ -1,3 +1,4 @@
+"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -83,7 +84,7 @@ function getDefaultMenuData() {
 function getDynamicMenuData() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const response = yield fetch("http://127.0.0.1:3000/api/v1/menu");
+            const response = yield fetch("https://restaurant-admin-production.up.railway.app/api/v1/menu");
             if (!response.ok) {
                 throw new Error(`Status error getting data ${response.status}`);
             }
@@ -104,7 +105,7 @@ function getDynamicMenuData() {
 function getDynamicEventData() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const response = yield fetch("http://127.0.0.1:3000/api/v1/events");
+            const response = yield fetch("https://restaurant-admin-production.up.railway.app/api/v1/events");
             if (!response.ok) {
                 throw new Error(`Status error getting data ${response.status}`);
             }
@@ -139,4 +140,3 @@ function getDefaultEventData() {
 }
 getDynamicMenuData();
 getDynamicEventData();
-export {};
